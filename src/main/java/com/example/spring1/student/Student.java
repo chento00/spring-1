@@ -7,7 +7,6 @@ import java.time.Period;
 @Table
 public
 class Student {
-
     @Id
     @SequenceGenerator(
             name = "db_student_sequence",
@@ -43,7 +42,6 @@ class Student {
         this.email = email;
         this.dob = dob;
     }
-
 
     public Long getId() {
         return id;

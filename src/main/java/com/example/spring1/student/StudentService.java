@@ -3,6 +3,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,6 +35,10 @@ public class StudentService {
            );
        }
        studentRepository.deleteById(studentId);
+    }
+    // check latter
+    public List<Student> getStudentById(Long id){
+        return studentRepository.findAllById(Collections.singleton(id));
     }
     @Transactional
     public void updateStudent(Long studentId,String name,String email){

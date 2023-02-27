@@ -10,3 +10,14 @@ get     : http://localhost:8080/api/v1/student
 delete  : http://localhost:8080/api/v1/student/1
 ============================================================================
 put     : http://localhost:8080/api/v1/student/1?name=chento&email=chento@gmail.com
+
+
+
+
+============cmd to run docker=============
+PS C:\Users\85599> psql -h localhost -p 5432 -U postgres
+Password for user postgres: password
+postgres=# \l
+postgres=# \c db_student
+You are now connected to database "db_student" as user "postgres".
+db_student=#

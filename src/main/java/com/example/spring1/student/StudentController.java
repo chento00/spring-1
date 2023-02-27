@@ -20,7 +20,10 @@ public class StudentController {
     public List<Student> getStudent(){
         return studentService.getStudent();
     }
-
+    @GetMapping(path = "{studentId}")
+    public List<Student> getStudentById(@PathVariable("studentId") Long studentId){
+        return studentService.getStudentById(studentId);
+    }
     @PostMapping
     public void registerNewStudent(@RequestBody Student student){
         studentService.addNewStuent(student);
